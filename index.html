@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/filteri.js"></script>
     <title>Gas</title>
   </head>
   <body>
     <div id="wrapper">
-      <header>
+      <header id="header">
         <h1>GPU Store</h1>
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#">Proizvodi</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
             </li>
             <li>
               <a href="#">Autor</a>
@@ -23,7 +27,98 @@
       </header>
 
       <div id="main">
-        <div id="left"></div>
+
+        <div id="left">
+
+          <div id="filters">
+
+            <div class="filter">      
+                  <h2>Proizvodjac</h2>
+
+                  <div class="checkboxes">
+
+                    <input type="checkbox" name="AMD" id="AMD" />
+                    <label for="AMD"> AMD</label>
+                  </br>
+                    <input type="checkbox" name="Intel" id="Intel" />
+                    <label for="Intel"> Intel</label>
+                  </br>
+                    <input type="checkbox" name="nvidia" id="nvidia" />
+                    <label for="nvidia"> Nvidia</label>
+
+                  </div>
+
+            </div>
+
+            <div class="filter">      
+              <h2>Tip Memorije</h2>
+
+              <div class="checkboxes">
+                <input type="checkbox" name="GDDR3" id="GDDR3" />
+                <label for="GDDR3"> GDDR3</label><br>
+              
+                <input type="checkbox" name="GDDR5" id="GDDR5" />
+                <label for="GDDR5"> GDDR5</label><br>
+              
+                <input type="checkbox" name="GDDR6" id="GDDR6" />
+                <label for="GDDR6"> GDDR6</label><br>
+              
+                <input type="checkbox" name="GDDR6X" id="GDDR6X" />
+                <label for="GDDR6X"> GDDR6X</label>
+
+              </div>
+            </div>
+
+            <div class="filter">      
+              <h2>Kolicina Memorije</h2>
+            
+              <div class="checkboxes">
+                <input type="checkbox" name="1GB" id="1GB" />
+                <label for="1GB"> 1GB</label><br>
+                
+                <input type="checkbox" name="2GB" id="2GB" />
+                <label for="2GB"> 2GB</label><br>
+            
+                <input type="checkbox" name="4GB" id="4GB" />
+                <label for="4GB"> 4GB</label><br>
+            
+                <input type="checkbox" name="6GB" id="6GB" />
+                <label for="6GB"> 6GB</label><br>
+            
+                <input type="checkbox" name="8GB" id="8GB" />
+                <label for="8GB"> 8GB</label><br>
+            
+                <input type="checkbox" name="12GB" id="12GB" />
+                <label for="12GB"> 12GB</label><br>
+            
+                <input type="checkbox" name="16GB" id="16GB" />
+                <label for="16GB"> 16GB</label><br>
+            
+                <input type="checkbox" name="24GB" id="24GB" />
+                <label for="24GB"> 24GB</label>
+              </div>
+            </div>
+
+            <div class="filter price-filter">
+              <h2>Cena</h2>
+              <div class="checkboxes">
+                <input type="range" id="price-min" name="price-min" min="4999" max="279999" step="1" value="4999" />
+                <input type="range" id="price-max" name="price-max" min="4999" max="279999" step="1" value="279999" />
+                <p id="price-range">Price: <span id="price-min-value">4999</span> RSD - <span id="price-max-value">279999</span> RSD</p>
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+
+
+          </div>
+        </div>
+
+
         <div id="right"></div>
       </div>
     </div>
