@@ -2,9 +2,13 @@
   margin: 0;
   padding: 0;
 }
+body {
+  overflow-x: hidden;
+}
 #wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
 }
 header {
@@ -13,41 +17,46 @@ header {
   background: linear-gradient(to right, #ed1c24, #00c7fd, #76b900);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
   margin: 0 auto;
   text-align: center;
   padding: 10px;
+  font-size: 2rem;
+  color: #000;
 }
-nav {
+
+header nav {
   margin: 0 auto;
   height: 50px;
-  width: 100%; /* Set to 100% width */
-  text-align: center; /* Centers the ul */
+  width: 100%;
+  text-align: center;
 }
 
-ul {
+header nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0; /* Remove default padding */
-  display: inline-block; /* This will make the ul content center horizontally */
+  padding: 0;
+  display: inline-block;
 }
 
-li {
+header nav li {
   border-radius: 4px;
   margin: 5px;
   padding: 10px 20px;
   background-color: #000;
-  width: auto; /* Let the width adjust based on the content */
-  float: left;
+  width: auto;
   text-align: center;
   cursor: pointer;
+  float: left;
+  transition: background-color 0.3s ease;
 }
 
-li:hover {
+header nav li:hover {
   background-color: #2f2f2f;
 }
 
-a {
+header nav a {
   text-decoration: none;
   color: #fff;
 }
@@ -57,27 +66,25 @@ a {
   border-radius: 16px;
   margin: 40px auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1160px;
   background-color: #fff;
-  height: 800px;
-  /* box-shadow: 10px 10px #2f2f2f; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap; /* Allow items to wrap */
 }
+
 #left {
-  width: 33.3%;
-  height: 100%;
-  margin: 0 auto;
+  flex: 1 1 33.3%; /* Take up 33.3% of the space */
   background-color: #f9f9f9;
-  float: left;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
 }
+
 #right {
-  width: 64%;
-  height: 100%;
-  margin: 0 auto;
+  flex: 1 1 64%; /* Take up 64% of the space */
   background-color: #f9f9f9;
-  float: right;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -203,4 +210,140 @@ a {
 #price-max-value {
   font-size: 14px;
   color: #333;
+}
+
+footer {
+  background-color: #0e215a;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  padding: 5px 0;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #0d1a46;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+#products {
+  display: grid;
+  grid-gap: 30px 10px; /* Horizontal and vertical spacing between products */
+  margin: 20px auto;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  #products {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  #products {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+}
+
+@media (max-width: 799px) {
+  #products {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+  }
+  #left {
+    width: 100%; /* Full width */
+    margin-right: 0; /* No right margin */
+    padding: 0; /* Reset padding if any */
+    position: relative; /* Ensure it's in the normal flow */
+  }
+
+  #main {
+    flex-direction: column; /* Stack elements vertically */
+  }
+}
+
+.product {
+  background-color: #fff;
+  width: 80%; /* Use percentage for responsive layout */
+  height: auto;
+  border-radius: 8px;
+  justify-self: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.product a {
+  text-decoration: none;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product h2 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.product .price {
+  font-size: 18px;
+  color: #e60000;
+  margin: 10px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #990000;
 }
