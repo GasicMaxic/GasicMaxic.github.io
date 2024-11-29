@@ -4,123 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/filteri.js"></script>
-    <title>Gas</title>
+    <title>GPU.shop</title>
   </head>
   <body>
     <div id="wrapper">
-      <header id="header">
-        <h1>GPU Store</h1>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Proizvodi</a>
-            </li>
-            <li>
-              <a href="#">Kontakt</a>
-            </li>
-            <li>
-              <a href="#">Autor</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        <header id="header">
+          <h1>GPU Store</h1>
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">Author</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-      <div id="main">
-
-        <div id="left">
-
-          <div id="filters">
-
-            <div class="filter">      
-                  <h2>Proizvodjac</h2>
-
-                  <div class="checkboxes">
-
-                    <input type="checkbox" name="AMD" id="AMD" />
-                    <label for="AMD"> AMD</label>
-                  </br>
-                    <input type="checkbox" name="Intel" id="Intel" />
-                    <label for="Intel"> Intel</label>
-                  </br>
-                    <input type="checkbox" name="nvidia" id="nvidia" />
-                    <label for="nvidia"> Nvidia</label>
-
-                  </div>
-
+        <div id="main">
+            <!-- High End Section -->
+            <div class="offer">
+                <div class="left">
+                    <div class="text">
+                        <h2>High End</h2>
+                        <p>
+                            If you're looking for the best performance on the market, our high-end GPUs offer unbeatable speed and power. Whether you're gaming, editing videos, or rendering 3D graphics, these cards deliver the smoothest experience. Take your system to the next level with our top-tier selection.
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href="store/high-end.html">
+                            <button>
+                                See Offers
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="offerImage">
+                    <img src="img/high-end-gpu.png" alt="A three fan high end graphics card">
+                </div>
             </div>
-
-            <div class="filter">      
-              <h2>Tip Memorije</h2>
-
-              <div class="checkboxes">
-                <input type="checkbox" name="GDDR3" id="GDDR3" />
-                <label for="GDDR3"> GDDR3</label><br>
-              
-                <input type="checkbox" name="GDDR5" id="GDDR5" />
-                <label for="GDDR5"> GDDR5</label><br>
-              
-                <input type="checkbox" name="GDDR6" id="GDDR6" />
-                <label for="GDDR6"> GDDR6</label><br>
-              
-                <input type="checkbox" name="GDDR6X" id="GDDR6X" />
-                <label for="GDDR6X"> GDDR6X</label>
-
-              </div>
+        
+            <!-- Mid Range Section -->
+            <div class="offer">
+                <div class="left">
+                    <div class="text">
+                        <h2>Mid Range</h2>
+                        <p>
+                            Our mid-range GPUs offer a great balance of performance and value. Perfect for those who want solid gaming and multitasking capabilities without breaking the bank. These cards are ideal for most gaming titles and general high-performance tasks.
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href="store/mid-range.html">
+                            <button>
+                                See Offers
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="offerImage">
+                    <img src="img/mid-range-gpu.png" alt="Mid range graphics card with dual fans">
+                </div>
             </div>
-
-            <div class="filter">      
-              <h2>Kolicina Memorije</h2>
-            
-              <div class="checkboxes">
-                <input type="checkbox" name="1GB" id="1GB" />
-                <label for="1GB"> 1GB</label><br>
-                
-                <input type="checkbox" name="2GB" id="2GB" />
-                <label for="2GB"> 2GB</label><br>
-            
-                <input type="checkbox" name="4GB" id="4GB" />
-                <label for="4GB"> 4GB</label><br>
-            
-                <input type="checkbox" name="6GB" id="6GB" />
-                <label for="6GB"> 6GB</label><br>
-            
-                <input type="checkbox" name="8GB" id="8GB" />
-                <label for="8GB"> 8GB</label><br>
-            
-                <input type="checkbox" name="12GB" id="12GB" />
-                <label for="12GB"> 12GB</label><br>
-            
-                <input type="checkbox" name="16GB" id="16GB" />
-                <label for="16GB"> 16GB</label><br>
-            
-                <input type="checkbox" name="24GB" id="24GB" />
-                <label for="24GB"> 24GB</label>
-              </div>
+        
+            <!-- Budget/Low-End Section -->
+            <div class="offer">
+                <div class="left">
+                    <div class="text">
+                        <h2>Budget (Low End)</h2>
+                        <p>
+                            Looking for great performance on a budget? Our low-end GPUs are the perfect solution for casual gamers and users who need basic graphics capabilities. These affordable options still provide solid performance for everyday tasks and light gaming.
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href="store/budget.html">
+                            <button>
+                                See Offers
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="offerImage">
+                    <img src="img/low-end-gpu.png" alt="Budget-friendly low-end graphics card">
+                </div>
             </div>
-
-            <div class="filter price-filter">
-              <h2>Cena</h2>
-              <div class="checkboxes">
-                <input type="range" id="price-min" name="price-min" min="4999" max="279999" step="1" value="4999" />
-                <input type="range" id="price-max" name="price-max" min="4999" max="279999" step="1" value="279999" />
-                <p id="price-range">Price: <span id="price-min-value">4999</span> RSD - <span id="price-max-value">279999</span> RSD</p>
-              </div>
-            </div>
-            
-            
-            
-            
-            
-            
-
-
-          </div>
         </div>
-
-
-        <div id="right"></div>
-      </div>
-    </div>
+    
   </body>
 </html>

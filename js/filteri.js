@@ -40,30 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const priceMin = document.getElementById("price-min");
-  const priceMax = document.getElementById("price-max");
-  const minValueDisplay = document.getElementById("price-min-value");
-  const maxValueDisplay = document.getElementById("price-max-value");
-
-  // Display initial values
-  minValueDisplay.textContent = priceMin.value;
-  maxValueDisplay.textContent = priceMax.value;
-
-  // Update the max slider range to be equal to the value of the min slider
-  priceMin.addEventListener("input", () => {
+    const priceMin = document.getElementById("price-min");
+    const priceMax = document.getElementById("price-max");
+    const minValueDisplay = document.getElementById("price-min-value");
+    const maxValueDisplay = document.getElementById("price-max-value");
+  
+    // Display initial values
     minValueDisplay.textContent = priceMin.value;
-    priceMax.min = priceMin.value; // Ensure max value is greater than or equal to min value
-    if (parseInt(priceMax.value) < parseInt(priceMin.value)) {
-      priceMax.value = priceMin.value; // Sync max value to min value if necessary
-    }
-  });
-
-  // Update the min slider range to be equal to the value of the max slider
-  priceMax.addEventListener("input", () => {
     maxValueDisplay.textContent = priceMax.value;
-    priceMin.max = priceMax.value; // Ensure min value is less than or equal to max value
-    if (parseInt(priceMin.value) > parseInt(priceMax.value)) {
-      priceMin.value = priceMax.value; // Sync min value to max value if necessary
-    }
+  
+    // Update the max slider range to be equal to the value of the min slider
+    priceMin.addEventListener("input", () => {
+      minValueDisplay.textContent = priceMin.value;
+      priceMax.min = priceMin.value; // Ensure max value is greater than or equal to min value
+      if (parseInt(priceMax.value) < parseInt(priceMin.value)) {
+        priceMax.value = priceMin.value; // Sync max value to min value if necessary
+      }
+    });
+  
+    // Update the min slider range to be equal to the value of the max slider
+    priceMax.addEventListener("input", () => {
+      maxValueDisplay.textContent = priceMax.value;
+      priceMin.max = priceMax.value; // Ensure min value is less than or equal to max value
+      if (parseInt(priceMin.value) > parseInt(priceMax.value)) {
+        priceMin.value = priceMax.value; // Sync min value to max value if necessary
+      }
+    });
   });
-});
+  
