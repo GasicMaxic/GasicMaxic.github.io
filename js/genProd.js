@@ -225,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const manufacturerInputs = document.querySelectorAll(
     '#filters .filter input[name="AMD"], #filters .filter input[name="Intel"], #filters .filter input[name="Nvidia"]'
   );
+
   const memoryTypeInputs = document.querySelectorAll(
     '#filters .filter input[name="GDDR3"], #filters .filter input[name="GDDR5"], #filters .filter input[name="GDDR6"], #filters .filter input[name="GDDR6X"]'
   );
