@@ -11,11 +11,15 @@ body {
 }
 
 #wrapper {
+  margin-top: 110px;
   width: 100%;
   background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 110px;
   background: linear-gradient(to right, #ed1c24, #00c7fd, #76b900);
@@ -53,16 +57,22 @@ header nav li {
   text-align: center;
   cursor: pointer;
   float: left;
+  transition: 0.3s;
+  display: inline-block; /* Keeps li elements aligned horizontally */
 }
 
 header nav li:hover {
   background-color: #2f2f2f;
 }
 
-header nav a {
+header nav li a {
+  display: block; /* Make the anchor take up the whole li */
   text-decoration: none;
   color: #fff;
+  width: 100%; /* Make the anchor tag fill the li */
+  height: 100%; /* Ensure the anchor tag fills the li's height */
 }
+
 #main {
   margin: 10px auto;
   max-width: 1200px;
@@ -75,13 +85,13 @@ header nav a {
 
 .offer {
   border-radius: 4px;
-  width: 90%;
-  height: auto;
-  background-color: #0e215a;
+  width: 100%;
+  background: linear-gradient(to right, #333, #555);
+  /* background-color: #0e215a; */
   margin: 10px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .left {
@@ -92,10 +102,21 @@ header nav a {
 }
 
 .offerImage {
+  /* border-radius: 400px;
+  background-color: #ffc220; */
+
   float: left;
   width: 50%;
   padding: 20px;
   box-sizing: border-box;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.offerImageBackground {
+  margin: 0 auto;
+  width: 400px;
+  border-radius: 50%;
+  background-color: #ffc220;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .offerImage img {
@@ -105,7 +126,7 @@ header nav a {
 }
 
 .text {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .left h2 {
@@ -148,52 +169,8 @@ header nav a {
   clear: both;
 }
 
-@media (max-width: 768px) {
-  #main {
-    width: 90%;
-  }
-
-  .left,
-  .offerImage {
-    width: 100%;
-    float: none;
-    padding: 10px;
-  }
-
-  .offerImage img {
-    width: 100%;
-  }
-
-  .left button {
-    width: 100%;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-
-  .footer-bottom {
-    font-size: 1rem;
-  }
-
-  .footer-section ul li a {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .left h2 {
-    font-size: 1.2rem;
-  }
-
-  .text p {
-    font-size: 1rem;
-  }
-}
-
 footer {
-  background-color: #0e215a;
+  background-color: #2c2c2c;
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -241,7 +218,144 @@ footer {
 }
 
 .footer-bottom {
-  background-color: #0d1a46;
+  background-color: #1a1a1a;
   padding: 15px 0;
   font-size: 0.9rem;
+}
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  background: linear-gradient(to right, #333, #555);
+  color: #fff;
+  padding: 20px;
+  column-gap: 20px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hero-text {
+  padding: 20px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 10px 20px;
+  background: #ffc220;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cta-buttons a:hover {
+  background: #ff9f00;
+}
+
+.testimonials {
+  background: #f7f7f7;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  display: inline-block; /* Inline-block for testimonials alignment */
+  vertical-align: top;
+  margin: 10px;
+  max-width: 300px;
+  text-align: left;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.newsletter p {
+  margin: 5px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.newsletter button:hover {
+  background: #ff3500;
+}
+
+@media (max-width: 480px) {
+  .left h2 {
+    font-size: 1.2rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  #main {
+    width: 100%;
+    padding: 0;
+  }
+  .text {
+    margin-top: 20px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .offerImage {
+    width: 100%;
+    float: none;
+    padding: 10px;
+  }
+
+  .offerImage img {
+    width: 100%;
+  }
+
+  .left button {
+    width: 100%;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .footer-bottom {
+    font-size: 1rem;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.9rem;
+  }
 }
