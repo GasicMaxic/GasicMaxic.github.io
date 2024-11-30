@@ -225,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const manufacturerInputs = document.querySelectorAll(
     '#filters .filter input[name="AMD"], #filters .filter input[name="Intel"], #filters .filter input[name="Nvidia"]'
   );
-
   const memoryTypeInputs = document.querySelectorAll(
     '#filters .filter input[name="GDDR3"], #filters .filter input[name="GDDR5"], #filters .filter input[name="GDDR6"], #filters .filter input[name="GDDR6X"]'
   );
@@ -233,20 +232,15 @@ document.addEventListener("DOMContentLoaded", function () {
     '#filters .filter input[name$="GB"]'
   );
 
+  // Select price input fields for minimum and maximum prices
+  const minPriceInput = document.querySelector(
+    '#filters .filter input[name="cenamin"]'
+  );
+  const maxPriceInput = document.querySelector(
+    '#filters .filter input[name="cenamax"]'
+  );
+
   const productGrid = document.getElementById("products");
-
-  // Get filters from query parameters or local storage
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialCategory = urlParams.get("category"); // e.g., "mid-range"
-  const initialManufacturer = urlParams.get("manufacturer"); // e.g., "AMD"
-
-  // Pre-select checkboxes based on query parameters
-  if (initialCategory) {
-    document.getElementById(initialCategory).checked = true;
-  }
-  if (initialManufacturer) {
-    document.getElementById(initialManufacturer).checked = true;
-  }
 
   // Function to render products
   function renderProducts(filteredProducts) {
@@ -258,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       productDiv.innerHTML = `
         <a href="${product.link}">
-          <img src="${product.image}" loading="lazy" alt="${product.name}" class="product-image" />
+          <img src="${product.image}" alt="${product.name}" class="product-image" />
           <h2>${product.name}</h2>
         </a>
         <p class="price">$${product.price}</p>
@@ -284,6 +278,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .filter((input) => input.checked)
       .map((input) => input.name);
 
+    // Parse price inputs or set defaults
+    const minPrice = parseFloat(minPriceInput.value) || 1; // Default to 1
+    const maxPrice = parseFloat(maxPriceInput.value) || 1400; // Default to 1399
+
     const filteredProducts = products.filter((product) => {
       const matchesCategory =
         selectedCategories.length === 0 ||
@@ -296,22 +294,25 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedMemoryTypes.includes(product.memoryType);
       const matchesVram =
         selectedVrams.length === 0 || selectedVrams.includes(product.vram);
+      const matchesPrice =
+        product.price >= minPrice && product.price <= maxPrice;
 
       return (
         matchesCategory &&
         matchesManufacturer &&
         matchesMemoryType &&
-        matchesVram
+        matchesVram &&
+        matchesPrice
       );
     });
 
     renderProducts(filteredProducts);
   }
 
-  // Apply filters initially based on query parameters
+  // Apply filters initially with default price range
   applyFilters();
 
-  // Add event listeners for checkboxes
+  // Add event listeners for filters and price inputs
   document.querySelectorAll("#filters .filter input").forEach((input) => {
     input.addEventListener("change", applyFilters);
   });

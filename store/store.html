@@ -62,8 +62,7 @@
             <div class="filter">      
               <h2>Tip Memorije</h2>
                 <div class="checkboxes">
-                  <input type="checkbox" name="GDDR3" id="GDDR3" />
-                  <label for="GDDR3"> GDDR3</label><br>        
+                      
                   <input type="checkbox" name="GDDR5" id="GDDR5" />
                   <label for="GDDR5"> GDDR5</label><br>         
                   <input type="checkbox" name="GDDR6" id="GDDR6" />
@@ -75,8 +74,7 @@
             <div class="filter">      
               <h2>Kolicina Memorije</h2>      
                 <div class="checkboxes">
-                  <input type="checkbox" name="1GB" id="1GB" />
-                  <label for="1GB"> 1GB</label><br>              
+                              
                   <input type="checkbox" name="2GB" id="2GB" />
                   <label for="2GB"> 2GB</label><br>           
                   <input type="checkbox" name="4GB" id="4GB" />
@@ -93,14 +91,17 @@
                   <label for="24GB"> 24GB</label>
                 </div>
             </div>
-            <div class="filter price-filter">
-              <h2>Cena</h2>
+            <div class="filter">
+              <h2 class="toggle">Cena</h2>
               <div class="checkboxes">
-                <input type="range" id="price-min" name="price-min" min="4999" max="279999" step="1" value="4999" />
-                <input type="range" id="price-max" name="price-max" min="4999" max="279999" step="1" value="279999" />
-                <p id="price-range">Price: <span id="price-min-value">4999</span> RSD - <span id="price-max-value">279999</span> RSD</p>
+                <label for="cenamin">Min:</label>
+                <input type="number" name="cenamin" id="cenamin" placeholder="0" value="1">
+                
+                <label for="cenamax">Max:</label>
+                <input type="number" name="cenamax" id="cenamax" placeholder="1399" value="1599">
               </div>
             </div>
+            
           </div>
         </div>
         <div id="right">
@@ -119,10 +120,10 @@
             <div class="footer-section">
                 <h3>Menu</h3>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                  <li><a href="..\index.html">Home</a></li>                
+                  <li><a href="store.html">Store</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Author</a></li>
                 </ul>
             </div>
         </div>

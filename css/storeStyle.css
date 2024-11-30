@@ -6,12 +6,16 @@ body {
   overflow-x: hidden;
 }
 #wrapper {
+  margin-top: 110px;
   width: 100%;
   min-height: 100vh;
   height: auto;
   background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 110px;
   background: linear-gradient(to right, #ed1c24, #00c7fd, #76b900);
@@ -70,12 +74,12 @@ header nav a {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  display: flex; /* Use flexbox layout */
-  flex-wrap: wrap; /* Allow items to wrap */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #left {
-  flex: 1 1 33.3%; /* Take up 33.3% of the space */
+  flex: 1 1 33.3%;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -83,12 +87,12 @@ header nav a {
 }
 
 #right {
-  flex: 1 1 64%; /* Take up 64% of the space */
+  flex: 1 1 64%;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-/* General styling for the filters */
+
 .filter {
   padding: 10px;
   margin: 10px auto;
@@ -99,10 +103,10 @@ header nav a {
 }
 
 .filter .checkboxes {
-  display: none; /* Initially hidden */
+  display: none;
   margin-top: 10px;
-  max-height: 200px; /* Set maximum height for the dropdown */
-  overflow-y: auto; /* Adds a scrollbar if content exceeds the max height */
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .filter h2 {
@@ -113,22 +117,21 @@ header nav a {
 }
 
 .filter .checkboxes input {
-  margin-right: 10px; /* Space between checkbox and label */
+  margin-right: 10px;
   vertical-align: middle;
 }
 
 .filter .checkboxes label {
   display: inline-block;
   font-size: 14px;
-  margin-right: 15px; /* Space between labels */
+  margin-right: 15px;
   vertical-align: middle;
 }
 
 .filter h2.active + .checkboxes {
-  display: block; /* Show checkboxes when the header is clicked */
+  display: block;
 }
 
-/* Optional: Rotate the arrow in the h2 when expanded */
 .filter h2.active::after {
   content: "▲";
   margin-left: 10px;
@@ -139,77 +142,31 @@ header nav a {
   margin-left: 10px;
 }
 
-/* Price filter specific styles */
-.price-filter {
-  padding: 10px;
-  margin: 10px auto;
-  width: 90%;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.checkboxes {
+  display: none; /* Initially hidden */
+  padding: 10px 0;
 }
 
-.price-filter .checkboxes {
-  display: none;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.price-filter input[type="range"] {
-  width: 100%;
-  height: 12px;
-  -webkit-appearance: none; /* Remove default appearance */
-  appearance: none;
-  background: #ddd; /* Light gray background */
-  border-radius: 5px;
-  outline: none;
-  position: absolute;
-  top: 0;
-}
-
-.price-filter input[type="range"]:focus {
-  outline: none;
-}
-
-/* Styling the thumb */
-.price-filter input[type="range"]::-webkit-slider-runnable-track {
-  height: 12px;
-  border-radius: 5px;
-}
-
-.price-filter input[type="range"]::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #76b900; /* Green color for the thumb */
-  border: 2px solid #fff; /* White border around thumb */
-  cursor: pointer;
-  transition: background 0.3s ease;
-  position: relative;
-  z-index: 2; /* Both thumbs above the track */
-}
-
-.price-filter input[type="range"]::-webkit-slider-thumb:hover {
-  background: #5b9900; /* Darker green when hovered */
-}
-
-/* Style for max thumb */
-.price-filter input[type="range"]#price-max::-webkit-slider-thumb {
-  z-index: 1; /* This thumb will stay below the min thumb */
-}
-
-#price-range {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-}
-
-#price-min-value,
-#price-max-value {
+.checkboxes label {
   font-size: 14px;
   color: #333;
+  /* margin-right: 5px; */
+  display: inline-block;
+}
+
+.checkboxes input[type="number"] {
+  width: 15%; /* Fixed width for consistent layout */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  /* margin-right: 10px; */
+}
+
+/* Show the checkboxes when h2 is active */
+.filter h2.active + .checkboxes {
+  display: block;
 }
 
 footer {
@@ -267,7 +224,7 @@ footer {
 }
 #products {
   display: grid;
-  grid-gap: 30px 10px; /* Horizontal and vertical spacing between products */
+  grid-gap: 30px 10px;
   margin: 20px auto;
   justify-content: center;
   width: 100%;
@@ -291,20 +248,20 @@ footer {
     grid-template-columns: repeat(1, 1fr); /* 1 item per row */
   }
   #left {
-    width: 100%; /* Full width */
-    margin-right: 0; /* No right margin */
-    padding: 0; /* Reset padding if any */
-    position: relative; /* Ensure it's in the normal flow */
+    width: 100%;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
   }
 
   #main {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
   }
 }
 
 .product {
   background-color: #fff;
-  width: 80%; /* Use percentage for responsive layout */
+  width: 80%;
   height: auto;
   border-radius: 8px;
   justify-self: center;
