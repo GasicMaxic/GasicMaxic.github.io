@@ -6,3 +6,6 @@ h2 {
   width: 50%;
   margin: 100px auto;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}

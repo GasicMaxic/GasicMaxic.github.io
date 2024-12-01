@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 #wrapper {
@@ -189,15 +190,15 @@ body {
 
 .newsletter button {
   padding: 10px 20px;
-  background: #ff4500;
-  color: #fff;
+  background: #ffc220;
+  color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 .newsletter button:hover {
-  background: #ff3500;
+  background: #ff9f00;
 }
 
 @media (max-width: 480px) {
