@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTX 4090 24GB</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/header.css" />
+    <link rel="stylesheet" href="../../css/product.css" />
+    <link rel="icon" href="../../img/graphic-card.png" type="image/x-icon" />
+    <script src="./product.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <h1>GPU Store</h1>
+        <nav>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../index.html">Store</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../autor/index.html">Author</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Product Container -->
+      <div class="product-container">
+        <!-- Product Image Section -->
+        <div class="product-image">
+          <img id="main-image" src="" alt="Main Product Image" />
+
+          <!-- Thumbnails for Product Images -->
+          <div class="thumbnails">
+            <img
+              src=""
+              class="thumbnail"
+              alt="Thumbnail 1"
+              onclick="changeImage(this)"
+            />
+            <img
+              src=""
+              class="thumbnail"
+              alt="Thumbnail 2"
+              onclick="changeImage(this)"
+            />
+            <img
+              src=""
+              class="thumbnail"
+              alt="Thumbnail 3"
+              onclick="changeImage(this)"
+            />
+            <!-- Add more thumbnails as needed -->
+          </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="product-details">
+          <h1 id="product-name">Product Title</h1>
+          <p class="price" id="product-price">$99.99</p>
+          <p class="description" id="product-description">
+            A brief description of the product goes here. This could include key
+            features, a short summary, or other relevant details.
+          </p>
+
+          <!-- Specifications Table -->
+          <h2>Specifications</h2>
+          <table>
+            <tr>
+              <th>Manufacturer</th>
+              <td id="gpu-manufacturer"></td>
+            </tr>
+            <tr>
+              <th>Memory Type</th>
+              <td id="gpu-memory-type"></td>
+            </tr>
+            <tr>
+              <th>VRAM</th>
+              <td id="gpu-vram"></td>
+            </tr>
+            <tr>
+              <th>Core Count</th>
+              <td id="gpu-core-count"></td>
+            </tr>
+            <tr>
+              <th>Base Clock</th>
+              <td id="gpu-clock-speed"></td>
+            </tr>
+            <tr>
+              <th>Boost Clock</th>
+              <td id="gpu-boost-clock"></td>
+            </tr>
+            <tr>
+              <th>TDP</th>
+              <td id="gpu-tdp"></td>
+            </tr>
+            <tr>
+              <th>Ports</th>
+              <td id="gpu-ports"></td>
+            </tr>
+          </table>
+
+          <!-- Quantity Selector -->
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" value="1" min="1" max="10" />
+
+          <!-- Action Buttons with Icons -->
+          <button class="add-to-cart">
+            <i class="fas fa-cart-plus"></i>Add to Cart
+          </button>
+          <button class="buy-now"><i class="fas fa-bolt"></i>Buy Now</button>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Address: Zdravka Čelara 16, Beograd</p>
+            <p>Email: daniel.cizik.69.24@ict.edu.rs</p>
+          </div>
+          <div class="footer-section">
+            <h3>Menu</h3>
+            <ul>
+              <li><a href="..\index.html">Home</a></li>
+              <li><a href="./index.html">Store</a></li>
+              <li><a href="../contact/index.html">Contact</a></li>
+              <li><a href="../autor/index.html">Author</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 GasicMaxic. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

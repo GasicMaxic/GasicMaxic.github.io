@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.breadcrumb {
+  margin: 20px;
+  font-size: 0.9em;
+}
+
+.breadcrumb a {
+  color: #000;
+  text-decoration: none;
+}
+#wrapper {
+  padding-top: 10px;
+}
+.product-container {
+  min-height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 20px;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  max-height: 100px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 5px 0;
+}
+
+.thumbnails::-webkit-scrollbar {
+  height: 8px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  object-fit: cover;
+}
+
+.thumbnails img:hover {
+  border-color: #333;
+}
+
+.product-details {
+  flex: 1;
+  max-width: 500px;
+}
+
+.product-details h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1.5em;
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+label,
+input {
+  display: block;
+  margin: 5px 0;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.add-to-cart,
+.buy-now {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.add-to-cart {
+  background-color: #2a9d8f;
+  color: #fff;
+}
+
+.add-to-cart:hover {
+  background-color: #21867a;
+}
+
+.buy-now {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.buy-now:hover {
+  background-color: #c1323c;
+}
+
+.add-to-cart i,
+.buy-now i {
+  margin-right: 8px;
+}
