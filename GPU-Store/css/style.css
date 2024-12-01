@@ -118,6 +118,7 @@ body {
   color: #fff;
   padding: 20px;
   column-gap: 20px;
+  border-radius: 4px;
 }
 
 .hero img {

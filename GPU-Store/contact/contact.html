@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\css/header.css" />
+    <link rel="stylesheet" href="\css/footer.css" />
+    <link rel="stylesheet" href="\css/contact.css" />
+    <link rel="icon" href="\img/graphic-card.png" type="image/x-icon" />
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <h1>GPU Store</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="\index.html">Home</a>
+            </li>
+            <li>
+              <a href="/store/store.html">Store</a>
+            </li>
+            <li>
+              <a href="/contact/contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="/autor/autor.html">Author</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="main">
+        <div class="contact-container">
+          <div class="form-container">
+            <h2>Contact Us</h2>
+            <form action="/submit" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="map-container">
+            <div id="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1817.6675004091446!2d20.484082188474677!3d44.81456398887806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2sICT%20College!5e0!3m2!1sen!2srs!4v1733001762895!5m2!1sen!2srs"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+        </div>
+      </div>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Address: Zdravka Čelara 16, Beograd</p>
+            <p>Email: daniel.cizik.69.24@ict.edu.rs</p>
+          </div>
+          <div class="footer-section">
+            <h3>Menu</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="store/store.html">Store</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Author</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 GasicMaxic. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
