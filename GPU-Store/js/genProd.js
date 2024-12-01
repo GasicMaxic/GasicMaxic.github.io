@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       tdp: "450W",
       ports: ["3x DisplayPort 1.4a", "1x HDMI 2.1"],
       link: "./products/product.html", // Update link to specific product page
-      image: "../../img/high-end-gpu.png",
+      image: "../img/high-end-gpu.png",
       description:
         "The Nvidia RTX 4090 is a high-end GPU, delivering incredible performance for gaming, creative, and AI workloads.",
       thumbnails: [
