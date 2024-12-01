@@ -2,10 +2,26 @@
   height: 350px;
   padding: 150px;
 }
-h2 {
-  width: 50%;
-  margin: 100px auto;
-}
+
 body {
   font-family: "Roboto", sans-serif;
+}
+#image {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+#image img {
+  width: 50%;
+  border-radius: 8px;
+}
+#text {
+  height: 350px;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+h2 {
+  margin: 131.5px auto;
+  vertical-align: middle;
 }
