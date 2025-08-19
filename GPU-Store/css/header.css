@@ -50,25 +50,35 @@ header nav ul {
 }
 
 header nav li {
+  display: flex;
+  /* height: 40px;
+  width: 80px; */
   border-radius: 4px;
   margin: 5px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-color: #000;
   width: auto;
-  text-align: center;
   cursor: pointer;
   float: left;
   transition: 0.3s;
+  text-align: center;
 }
 
-header nav li:hover {
+/* header nav li:hover {
   background-color: #2f2f2f;
-}
+} */
 
 header nav li a {
+  padding: 10px 15px; /* space inside for click area */
+  border-radius: 4px;
   display: block; /* Make the anchor take up the whole li */
   text-decoration: none;
   color: #fff;
   width: 100%; /* Make the anchor tag fill the li */
   height: 100%; /* Ensure the anchor tag fills the li's height */
+  text-align: center;
+  z-index: 1000;
+}
+header nav li a:hover {
+  background-color: #2f2f2f;
 }
